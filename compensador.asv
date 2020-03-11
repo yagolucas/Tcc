@@ -3,11 +3,17 @@ function novoIm = compensador(im1,im2)
     aux2 = idct2(im2);
     passo = 9;
     [w,h] = size(aux1);
+    erro = 1;
     for i=1:passo:w-passo
        for j=i:passo:h-passo
-           erro = 1;
            posW = i;
            posH = j;
+           erroFound = erro;
+           if erroFound > (aux1(i:i+passo,j:j+passo),aux2(i:i+passo,j:j+passo))
+               erro = (aux1(i:i+passo,j:j+passo),aux2(i:i+passo,j:j+passo))
+               posW = i;
+               posH = j;
+           end
            if immse(aux1(i:i+passo,j:j+passo),aux2(i:i+passo,j:j+passo)) >= erro
                 posW = i;
                 posH = j;
