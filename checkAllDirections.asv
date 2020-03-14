@@ -1,0 +1,30 @@
+function position = checkAllDirections(im1,im2,passo,initX1,initY1,initX2,initY2,scale,reduz)
+    defaultError = 1;
+    position = [initX1,initY1];
+    for i=0:scale
+        for j=0:scale
+            erroAux1 = checkSquares(im1,im2,passo,initX1,initY1,initX2+i,initY2+j);
+            if erroAux1 < defaultError
+                defaultError = erroAux1;
+                roundedx1 = round(initX2+(i/reduz));
+                
+                position = [round(initX2+(i/reduz)),round(initY2+(j/reduz))]
+            end
+            erroAux2 = checkSquares(im1,im2,passo,initX1,initY1,initX2+i,initY2-j);
+            if erroAux2 < defaultError
+                defaultError = erroAux2;
+                position = [round(initX2+(i/reduz)),round(initY2-(j/reduz))]
+            end
+            erroAux3 = checkSquares(im1,im2,passo,initX1,initY1,initX2-i,initY2+j);
+            if erroAux3 < defaultError
+                defaultError = erroAux3;
+                position = [round(initX2-(i/reduz)),round(initY2+(j/reduz))]
+            end
+            erroAux4 = checkSquares(im1,im2,passo,initX1,initY1,initX2-i,initY2-j);
+            if erroAux4 < defaultError
+                defaultError = erroAux4;
+                position = [round(initX2-(i/reduz)),round(initY2-(j/reduz))]
+            end
+        end
+    end
+end
