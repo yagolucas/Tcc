@@ -1,4 +1,4 @@
-function novoIm = getPredict(im1,im2)
+function novoIm = getPredict(im1,im2,tax)
     aux1 = idct2(im1);
     aux2 = idct2(im2);
     aux3 = aux1;
@@ -8,7 +8,7 @@ function novoIm = getPredict(im1,im2)
     [w,h] = size(aux1);
     for i=1:passo:w-passo
        for j=1:passo:h-passo
-           position = checkAllDirections(aux1,aux2,passo,i,j,i,j,8,0.2);
+           position = checkAllDirections(aux1,aux2,passo,i,j,i,j,8,tax);
            aux3(i:i+passo,j:j+passo) = aux2(position(1):position(1)+passo,position(2):position(2)+passo);
        end
     end
