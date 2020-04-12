@@ -3,6 +3,9 @@ function position = checkAllDirections(im1,im2,passo,initX1,initY1,initX2,initY2
     position = {[initX1,initY1],[initX1,initY1],[initX1,initY1]};
     for i=0:scale
         for j=0:scale
+            if checkSquares(im1,im2,passo,initX1,initY1,initX1,initY1) == 0
+                continue;
+            end
             erroAux1 = checkSquares(im1,im2,passo,initX1,initY1,initX2+i,initY2+j);
             if erroAux1 < defaultError
                 defaultError = erroAux1;

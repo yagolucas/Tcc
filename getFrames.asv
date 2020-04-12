@@ -14,7 +14,7 @@ for img = 1:tamanho/5
 end
 [source, qtdFrames] = size(c);
 for i=1:qtdFrames - 1
-   
+    d{i} = checkAllDirections()
 end
 frames = {c};
 end
