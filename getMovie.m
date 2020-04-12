@@ -4,16 +4,15 @@ function novoFilm = getMovie(compressed, totalFrames)
    novoFilm{1} = compressed{1};
    index = 1;
    for i=1:qtdFrames - 1
-       meio = getPredict(compressed{i},compressed{i+1},0.5);
-       primeiro = getPredict(compressed{i},meio,0.25);
-       ultimo = getPredict(primeiro,compressed{i+1},0.75);
-       novoFilm{index} = primeiro;
+       imGeradas = getPredict(compressed{i},compressed{i+1});
+       novoFilm{index} = imGeradas{1};
        index = index + 1;
-       novoFilm{index} = meio;
+       novoFilm{index} = imGeradas{2};
        index = index + 1;
-       novoFilm{index} = ultimo;
+       novoFilm{index} = imGeradas{3};
        index = index + 1;
        novoFilm{index} = compressed{i+1};
        index = index + 1;
+       countagem = i
    end
 end
