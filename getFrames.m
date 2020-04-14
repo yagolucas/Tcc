@@ -5,7 +5,8 @@ sobra = mod(tamanho,5);
 tamanho = tamanho - sobra;
 c = {};
 d = {};
-for img = 1:tamanho/5
+tic
+parfor (img = 1:tamanho/5,12)
     b = read(a, (img*5)-4);
     gray = rgb2gray(b);
     gray = double(gray)/255;
@@ -13,8 +14,9 @@ for img = 1:tamanho/5
     %%imshow(c{img});
 end
 [source, qtdFrames] = size(c);
-for i=1:qtdFrames - 1
-   
+parfor (i=1:qtdFrames-1,12)
+   d{i} = getPredict2(c{i},c{i+1});
 end
-frames = {c};
+toc
+frames = {c,d};
 end

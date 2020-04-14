@@ -1,7 +1,7 @@
 function novoIm = getPredict(im1,im2)
     aux1 = idct2(im1);
     aux2 = idct2(im2);
-    aux3 = {aux1,aux1,aux1};
+    aux3 = {aux1,aux1,aux1,aux1};
     passo = 16;
     count = 0;
     error = 1;
@@ -12,6 +12,7 @@ function novoIm = getPredict(im1,im2)
            aux3{1}(i:i+passo,j:j+passo) = aux2(position{1}(1):position{1}(1)+passo,position{1}(2):position{1}(2)+passo);
            aux3{2}(i:i+passo,j:j+passo) = aux2(position{2}(1):position{2}(1)+passo,position{2}(2):position{2}(2)+passo);
            aux3{3}(i:i+passo,j:j+passo) = aux2(position{3}(1):position{3}(1)+passo,position{3}(2):position{3}(2)+passo);
+           aux3{4}(i:i+passo,j:j+passo) = aux2(position{3}(1):position{3}(1)+passo,position{3}(2):position{3}(2)+passo);
        end
     end
     novoIm = aux3;
