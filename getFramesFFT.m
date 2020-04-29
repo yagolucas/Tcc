@@ -9,7 +9,7 @@ parfor (img = 1:tamanho/4,12)
     b = read(a, (img*4)-3);
     gray = rgb2gray(b);
     gray = double(gray)/255;
-    c{img} = fft2(gray);
+    c{img} = fftshift(fft2(gray));
 end
 [source, qtdFrames] = size(c);
 parfor (i=1:qtdFrames-1,12)

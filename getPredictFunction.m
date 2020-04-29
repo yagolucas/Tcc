@@ -1,7 +1,6 @@
-function vetorMov = getPredict2FFT(im1,im2)
-    aux1 = ifft2(fftshift(im1));
-    aux2 = ifft2(fftshift(im2));
-    %aux3 = {aux1,aux1,aux1};
+function vetorMov = getPredictFunction(im1,im2,inversa)
+    aux1 = inversa(im1);
+    aux2 = inversa(im2);
     passo = 16;
     count = 0;
     error = 1;
@@ -16,5 +15,4 @@ function vetorMov = getPredict2FFT(im1,im2)
            vetorMov(num2str(i) + "" + num2str(j)) = position;
        end
     end
-    %novoIm = aux3;
 end
