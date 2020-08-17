@@ -1,4 +1,5 @@
 function frames = getFramesFFT(path)
+tic
 a=VideoReader(path);
 tamanho = a.NumberOfFrames;
 sobra = mod(tamanho,4);
@@ -16,4 +17,6 @@ parfor (i=1:qtdFrames-1,12)
    d{i} = getPredict2FFT(c{i},c{i+1});
 end
 frames = {c,d};
+toc
+tempo = "compressão fft--- " + path
 end
