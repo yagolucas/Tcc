@@ -4,7 +4,7 @@ function macroBlocos = reverseBlocksTrans(imagem,crop)
     [width, height] = size(copia);
     for i = crop:crop:width
         for j = crop:crop:height
-            copia(i-crop+1:i, j-crop+1:j) = idct2(copia(i-crop+1:i, j-crop+1:j));
+            copia(i-crop+1:i, j-crop+1:j) = ifft2(copia(i-crop+1:i, j-crop+1:j));
         end
     end
     imshow(copia);
