@@ -1,4 +1,4 @@
-function Xk = teste(xn)
+function Xk = c_idft(xn)
 %To compute the dft of the sequence x(n)
 [L, P] = size(xn);
 %Check for the length of the DFT

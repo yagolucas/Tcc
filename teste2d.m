@@ -14,10 +14,11 @@ function xs = teste2d(xn)
     [row,col] = size(xn);
     copia = [xn zeros(1,0)];
     for i=1:1:row
-        copia(i,1:end) = teste(copia(i,1:end));
+        copia(i,1:end) = teste(xn(i,1:end));
     end
     for j=1:1:col
         copia(1:end,j) = teste(copia(1:end,j)');
     end
+    copia(2:end,2:end) = flip(copia(2:end, 2:end),1);
     xs = copia;
 end
