@@ -11,4 +11,4 @@ for n=0:1:P-1;
          x2(n+1,k+1) = p;
     end
 end
-Xk=real(x1*x2);
+Xk=x1*x2;
