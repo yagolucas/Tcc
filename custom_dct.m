@@ -8,7 +8,6 @@ function B = custom_dct(A)
    end
    A = double(A);
    B = zeros(M,N);
-   
    for p = 1:M
        for q = 1:N
            if p == 1
@@ -16,17 +15,12 @@ function B = custom_dct(A)
            else
                ap = sqrt((2/M));
            end
-           
            if q == 1
                aq = sqrt(1/N);
            else
                aq = sqrt((2/N));
-           end
-           
-           
-           
+           end                  
            res = 0.00;
-           
            for m = 1:M
                for n = 1:N
                    mm = m-1; %-1;
@@ -37,14 +31,8 @@ function B = custom_dct(A)
                        *cos((pi*(2*nn+1)*qq/(2*N)));
                    res = res + test;
                end
-           end
-           
-           B(p,q) = ap*aq*res;
-           
-           
-           
-       end
-       
-   end
-           
+           end   
+           B(p,q) = ap*aq*res;        
+       end   
+   end 
 end
