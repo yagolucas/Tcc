@@ -1,6 +1,6 @@
 function vetorMov = getPredict2(im1,im2)
     aux1 = getBlocksTrans(im1,8,@custom_idct_2d);
-    aux2 = getBlocksTrans(im2,8,@custom_idct_2d);
+    aux2 = getBlocksTrans(im1,8,@custom_idct_2d);
     %aux3 = {aux1,aux1,aux1};
     passo = 8;
     count = 0;
