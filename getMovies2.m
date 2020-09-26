@@ -1,5 +1,4 @@
 function movie = getMovies2(frames,vector,passo,nome,func)
-    tic
     [un1, qtdFrames] = size(frames);
     movie = {};
     movie{1} = getBlocksTrans(frames{1},8,func);
@@ -30,6 +29,4 @@ function movie = getMovies2(frames,vector,passo,nome,func)
         movie{k}(movie{k} > 1) = 1;
         movie{k}(movie{k} < 0) = 0;
     end
-    toc
-    tempo = "descompressão dct ---  " + nome;
 end

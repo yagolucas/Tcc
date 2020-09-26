@@ -1,5 +1,5 @@
 function movie = generateMovie(frames,name)
-    writerObj = VideoWriter( name);
+    writerObj = VideoWriter(name);
     open(writerObj);
     [aw1,qtdFrames] = size(frames);
     for i=1:qtdFrames
