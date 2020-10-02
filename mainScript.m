@@ -15,7 +15,7 @@ function voids = mainScript()
            movie = getMovies2(frames{1},frames{2},passo,nome+"-dct.avi", @custom_idct_2d);
            tempoDescompressao = toc;
            fprintf(file,"DCT - tempo de descompressão : %8.4f\n", tempoDescompressao);
-           generateMovie(movie,pathTransformados + nome + "-dct.avi");
+           generateMovie(movie,nome + "-dct.avi");
            % Inicio da DFT
            frames = getFrames(pathOriginais + nome, passo,@custom_dft_2d);
            fprintf(file,"DFT - tempo de separar frames e vetor de movimento : %8.4f\n", frames{4});
@@ -24,7 +24,7 @@ function voids = mainScript()
            movie = getMovies2(frames{1},frames{2},passo,nome+"-dft.avi", @custom_idft_2d);
            tempoDescompressao = toc;
            fprintf(file,"DFT - tempo de descompressão : %8.4f\n", tempoDescompressao);
-           generateMovie(movie,pathTransformados + nome + "-dft.avi");
+           generateMovie(movie,nome + "-dft.avi");
            fclose(file);
         end
     end
