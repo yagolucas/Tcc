@@ -1,6 +1,6 @@
 function position = checkAllDirections(im1,im2,passo,initX1,initY1,initX2,initY2,scale)
     defaultError = 1;
-    position = {[initX1,initY1],[initX1,initY1],[initX1,initY1],[initX1,initY1]};
+    position = {[initX1,initY1,initX2,initY2,],[initX1,initY1,initX2,initY2,],[initX1,initY1,initX2,initY2,],[initX1,initY1,initX2,initY2,]};
     if checkSquares(im1,im2,passo,initX1,initY1,initX1,initY1) == 0
         return;
     end
@@ -15,7 +15,10 @@ function position = checkAllDirections(im1,im2,passo,initX1,initY1,initX2,initY2
                 roundedy12 = round(initY2+(j*0.5));
                 roundedx13 = round(initX2+(i*0.75));
                 roundedy13 = round(initY2+(j*0.75));             
-                position = {[roundedx11,roundedy11],[roundedx12,roundedy12],[roundedx13,roundedy13]};
+                position = {...
+                    [roundedx11,roundedy11,initX2+i,initY2+j],...
+                    [roundedx12,roundedy12,initX2+i,initY2+j],...
+                    [roundedx13,roundedy13,initX2+i,initY2+j]};
                 if erroAux1 == 0
                     return;
                 end
@@ -29,7 +32,10 @@ function position = checkAllDirections(im1,im2,passo,initX1,initY1,initX2,initY2
                 roundedy22 = round(initY2-(j*0.5));
                 roundedx23 = round(initX2+(i*0.75));
                 roundedy23 = round(initY2-(j*0.75));                             
-                position = {[roundedx21,roundedy21],[roundedx22,roundedy22],[roundedx23,roundedy23]};
+                position = {...
+                    [roundedx21,roundedy21,initX2+i,initY2-j],...
+                    [roundedx22,roundedy22,initX2+i,initY2-j],...
+                    [roundedx23,roundedy23,initX2+i,initY2-j]};
                 if erroAux2 == 0
                     return;
                 end
@@ -43,7 +49,10 @@ function position = checkAllDirections(im1,im2,passo,initX1,initY1,initX2,initY2
                 roundedy32 = round(initY2+(j*0.5));
                 roundedx33 = round(initX2-(i*0.75));
                 roundedy33 = round(initY2+(j*0.75));          
-                position = {[roundedx31,roundedy31],[roundedx32,roundedy32],[roundedx33,roundedy33]};
+                position = {...
+                    [roundedx31,roundedy31,initX2-i,initY2+j],...
+                    [roundedx32,roundedy32,initX2-i,initY2+j],...
+                    [roundedx33,roundedy33,initX2-i,initY2+j]};
                 if erroAux3 == 0
                     return;
                 end
@@ -57,7 +66,10 @@ function position = checkAllDirections(im1,im2,passo,initX1,initY1,initX2,initY2
                 roundedy42 = round(initY2-(j*0.5));
                 roundedx43 = round(initX2-(i*0.75));
                 roundedy43 = round(initY2-(j*0.75));
-                position = {[roundedx41,roundedy41],[roundedx42,roundedy42],[roundedx43,roundedy43]};
+                position = {...
+                    [roundedx41,roundedy41,initX2-i,initY2-j],...
+                    [roundedx42,roundedy42,initX2-i,initY2-j],...
+                    [roundedx43,roundedy43,initX2-i,initY2-j]};
                 if erroAux4 == 0
                     return;
                 end
