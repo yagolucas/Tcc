@@ -1,4 +1,4 @@
-function macroBlocos = getBlocksTrans(imagem,crop,func) 
+function macroBlocos = getBlocksTrans(imagem,crop,func,compressao) 
     copia = imagem;
     %copia = imresize(copia,[320 280]);
     [width, height] = size(copia);
@@ -12,6 +12,9 @@ function macroBlocos = getBlocksTrans(imagem,crop,func)
               copia(i:crop+i-1, j:end) = func(copia(i:crop+i-1, j:end));
             else
                 copia(i:crop+i-1, j:crop+j-1) = func(copia(i:crop+i-1, j:crop+j-1));
+            end
+            if compressao
+                copia(i:crop+i-1, j:crop+j-1) = linearizacao(copia(i:crop+i-1, j:crop+j-1));
             end
         end
     end

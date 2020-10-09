@@ -1,6 +1,6 @@
-DCT - tempo de separar frames e vetor de movimento : 4277.7521
-DCT - Tamanho total e bytes nulos 34560000 : 9133
-DCT - tempo de descompressão : 146.1668
-DFT - tempo de separar frames e vetor de movimento : 4531.9297
-DFT - Tamanho total e bytes nulos 34560000 : 195515
-DFT - tempo de descompressão : 783.0356
+DCT - tempo de separar frames e vetor de movimento : 310.8217
+DCT - Tamanho total e bytes nulos 137318400 : 12810601
+DCT - tempo de descompressão : 241.5569
+DFT - tempo de separar frames e vetor de movimento : 2103.7131
+DFT - Tamanho total e bytes nulos 137318400 : 8443465
+DFT - tempo de descompressão : 1695.3174
