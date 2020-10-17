@@ -24,5 +24,5 @@ function errorImages = recreateFrames(imagemBase,imagemP,imagens,positions,fun)
     taxaCompressao = taxaCompressao + getTaxaCompressao(error{2});
     taxaCompressao = taxaCompressao + getTaxaCompressao(error{3});
     taxaCompressao = taxaCompressao + getTaxaCompressao(error{4});
-    errorImages = {error , taxaCompressao};
+    errorImages = {error , taxaCompressao,erroIm1};
 end

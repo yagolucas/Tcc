@@ -1,10 +1,6 @@
-function x = teste(path)
-    a=VideoReader(path);
-    x = cell(2);
-    im1 = read(a,1);
-    im1 = double(rgb2gray(im1))/255;
-    im2 = read(a,6);
-    im2 = double(rgb2gray(im2))/255;
-    x{1} = im1;
-    x{2} = im2;
+function x = teste(im)
+    im1 = getBlocksTrans(im,8,@custom_dct_2d,true);
+    im11 = getBlocksTrans(im1,8,@custom_idct_2d,false);
+    anser = abs(im1 - im11);
+    x = {sum(sum(anser)), im11};
 end

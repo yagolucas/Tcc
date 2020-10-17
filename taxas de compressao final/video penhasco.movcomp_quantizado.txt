@@ -1,0 +1,6 @@
+DCT - valor dos bytes errados : 121508411.0000
+DFT - valor dos bytes errados : 80628345.0000
+DCT - valor dos bytes errados por pixel :   2.6907
+DFT - valor dos bytes errados por pixel :   1.7855
+DCT - valor dos bytes errados por frame : 619940.8724
+DFT - valor dos bytes errados por frame : 411369.1071

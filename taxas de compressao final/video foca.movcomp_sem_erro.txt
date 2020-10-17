@@ -1,0 +1,2 @@
+DCT - valor dos bytes errados : 587850.3294
+DFT - valor dos bytes errados : 587850.0549
