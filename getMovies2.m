@@ -1,16 +1,16 @@
-function movie = getMovies2(frames,vector,passo,errorVector,func)
+function movie = getMovies2(frames,vector,passo,errorVector,func,fator)
     [un1, qtdFrames] = size(frames);
     movie = {};
-    movie{1} = getBlocksTrans(frames{1},8,func,false);
+    movie{1} = getBlocksTrans(frames{1},8,func,false,fator);
     for index = 1:qtdFrames - 1
-        matrixError = {getBlocksTrans(errorVector{index}{1},8,func,false), ...
-            getBlocksTrans(errorVector{index}{2},8,func,false),...
-            getBlocksTrans(errorVector{index}{3},8,func,false),...
-            getBlocksTrans(errorVector{index}{4},8,func,false)};
-        frameAux = getBlocksTrans(frames{index},8,func,false);
+        matrixError = {getBlocksTrans(errorVector{index}{1},8,func,false,fator), ...
+            getBlocksTrans(errorVector{index}{2},8,func,false,fator),...
+            getBlocksTrans(errorVector{index}{3},8,func,false,fator),...
+            getBlocksTrans(errorVector{index}{4},8,func,false,fator)};
+        frameAux = getBlocksTrans(frames{index},8,func,false,fator);
         framesGerados = {frameAux,frameAux,frameAux,frameAux};
         imageI = frameAux;
-        imageP = getBlocksTrans(frames{index+1},8,func,false);
+        imageP = getBlocksTrans(frames{index+1},8,func,false,fator);
         vectorMoviment = vector{index};
         [width,height] = size(imageI);
         for i=1:passo:width-passo

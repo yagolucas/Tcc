@@ -1,0 +1,8 @@
+DCT - Tamanho total e bytes nulos com fator:0.25 64742400 : 60329055
+DFT - Tamanho total e bytes nulos com fator: 0.25 64742400 : 54743268
+DCT - Tamanho total e bytes nulos com fator:0.50 64742400 : 58757551
+DFT - Tamanho total e bytes nulos com fator: 0.50 64742400 : 50151521
+DCT - Tamanho total e bytes nulos com fator:2.00 64742400 : 53684213
+DFT - Tamanho total e bytes nulos com fator: 2.00 64742400 : 36417392
+DCT - Tamanho total e bytes nulos com fator:4.00 64742400 : 49909988
+DFT - Tamanho total e bytes nulos com fator: 4.00 64742400 : 27804265

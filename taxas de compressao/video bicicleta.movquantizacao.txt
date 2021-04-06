@@ -1,0 +1,28 @@
+DCT - valor dos bytes errados com fator 0.25 : 98285156.0000
+DFT - valor dos bytes errados com fator 0.25 : 57633542.0000
+DCT - valor dos bytes errados por pixel com fator 0.25 :   2.2935
+DFT - valor dos bytes errados por pixel com fator 0.25 :   1.3449
+DCT - valor dos bytes errados por frame com fator 0.25 : 528414.8172
+DFT - valor dos bytes errados por frame com fator 0.25 : 309857.7527
+
+DCT - valor dos bytes errados com fator 0.50 : 67585431.0000
+DFT - valor dos bytes errados com fator 0.50 : 42551567.0000
+DCT - valor dos bytes errados por pixel com fator 0.50 :   1.5771
+DFT - valor dos bytes errados por pixel com fator 0.50 :   0.9929
+DCT - valor dos bytes errados por frame com fator 0.50 : 363362.5323
+DFT - valor dos bytes errados por frame com fator 0.50 : 228771.8656
+
+DCT - valor dos bytes errados com fator 2.00 : 34410210.0000
+DFT - valor dos bytes errados com fator 2.00 : 27714336.0000
+DCT - valor dos bytes errados por pixel com fator 2.00 :   0.8030
+DFT - valor dos bytes errados por pixel com fator 2.00 :   0.6467
+DCT - valor dos bytes errados por frame com fator 2.00 : 185001.1290
+DFT - valor dos bytes errados por frame com fator 2.00 : 149001.8065
+
+DCT - valor dos bytes errados com fator 4.00 : 33598011.0000
+DFT - valor dos bytes errados com fator 4.00 : 26225437.0000
+DCT - valor dos bytes errados por pixel com fator 4.00 :   0.7840
+DFT - valor dos bytes errados por pixel com fator 4.00 :   0.6120
+DCT - valor dos bytes errados por frame com fator 4.00 : 180634.4677
+DFT - valor dos bytes errados por frame com fator 4.00 : 140996.9731
+

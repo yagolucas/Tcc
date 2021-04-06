@@ -1,4 +1,4 @@
-function errorImages = recreateFrames(imagemBase,imagemP,imagens,positions,fun)
+function errorImages = recreateFrames(imagemBase,imagemP,imagens,positions,fun,fator)
     [width,height] = size(imagemBase);
     passo = 64;
     imagensGeradas = {imagemBase, imagemBase, imagemBase, imagemBase};
@@ -16,10 +16,10 @@ function errorImages = recreateFrames(imagemBase,imagemP,imagens,positions,fun)
     erroIm2 = imagens{2} - imagensGeradas{2};
     erroIm3 = imagens{3} - imagensGeradas{3};
     erroIm4 = imagens{4} - imagensGeradas{4};
-    error = {getBlocksTrans(erroIm1,8,fun,true),...
-        getBlocksTrans(erroIm2,8,fun,true),...
-        getBlocksTrans(erroIm3,8,fun,true),...
-        getBlocksTrans(erroIm4,8,fun,true)};
+    error = {getBlocksTrans(erroIm1,8,fun,true,fator),...
+        getBlocksTrans(erroIm2,8,fun,true,fator),...
+        getBlocksTrans(erroIm3,8,fun,true,fator),...
+        getBlocksTrans(erroIm4,8,fun,true,fator)};
     taxaCompressao = taxaCompressao + getTaxaCompressao(error{1});
     taxaCompressao = taxaCompressao + getTaxaCompressao(error{2});
     taxaCompressao = taxaCompressao + getTaxaCompressao(error{3});

@@ -1,4 +1,4 @@
-function frames = getFrames(path,passo,func)
+function frames = getFrames(path,passo,func,fator)
 tic;
 a=VideoReader(path);
 tamanho = a.NumberOfFrames;
@@ -24,11 +24,11 @@ for i=1:tamanho/5
         i2 = double(rgb2gray(i2))/255;
         d{i} = getPredictFinal(i1,i2);
         imagesForErrorCalc = { au1 , au2 , au3 , au4};
-        aux = recreateFrames(i1,i2, imagesForErrorCalc, d{i}, func);
+        aux = recreateFrames(i1,i2, imagesForErrorCalc, d{i}, func,fator);
         errorMatriz{i} = aux{1};
         t = t + aux{2};
     end
-    c{i} = getBlocksTrans(i1,passo,func,true);
+    c{i} = getBlocksTrans(i1,passo,func,true,fator);
     t = t + getTaxaCompressao(c{i});
 end
 tempo = toc;
